@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+	xmlns:gap   = "http://phonegap.com/ns/1.0"
+	id          = "com.Degrees314.DiabetTest"
+	versionCode = "10"
+	version     = "0.6.11" >
+
+	<!-- versionCode is optional and Android only -->
+
+	<name>Diabet-Test</name>
+
+	<preference name="orientation" value="portrait"/>
+	<preference name="fullscreen" value="false"/>
+	<preference name="KeepRunning" value="false"/>
+	<preference name="SplashScreen" value="screen"/>
+	<preference name="android-build-tool" value="gradle"/>
+
+	<plugin name="cordova-plugin-splashscreen" source="npm"/>
+
+	<description>
+		Diabet-Test adalah aplikasi yang digunakan untuk deteksi dini penyakit diabetes, mengingat banyaknya penderita diabetes yang pada awalnya tidak sadar bahwa dia sudah terkena diabetes. PERINGATAN: Aplikasi ini hanya untuk pendeteksian dini, BUKAN sebagai pengganti tenaga medis, segala tindak lanjut dari penanganan diabetes TETAP MEMBUTUHKAN TENAGA MEDIS.
+	</description>
+
+	<author href="https://diabettest.id" email="developer@diabettest.id">
+		Diabet-Test Developer Team
+	</author>
+
+	<icon src="res/android/icons/ldpi.png" platform="android" qualifier="ldpi" />
+	<icon src="res/android/icons/mdpi.png" platform="android" qualifier="mdpi" />
+	<icon src="res/android/icons/hdpi.png" platform="android" qualifier="hdpi" />
+	<splash src="res/android/splash/ldpi.png" platform="android" qualifier="ldpi" />
+	<splash src="res/android/splash/mdpi.png" platform="android" qualifier="mdpi" />
+	<splash src="res/android/splash/hdpi.png" platform="android" qualifier="hdpi" />
+	
+	<plugin name="cordova-plugin-inappbrowser" />
+	<plugin name="cordova-plugin-whitelist" version="1" />
+	<plugin name="cordova-plugin-statusbar" spec="~2.4.2" />
+
+	<access origin="*" />
+	<allow-intent href="https://*/*" />
+	<allow-intent href="http://*/*" />
+	<allow-navigation href="https://*/*" />
+	<allow-navigation href="http://*/*" />
+	
+	<preference name="StatusBarBackgroundColor" value="#FFC30F" />
+</widget>
