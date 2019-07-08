@@ -1,4 +1,4 @@
-var serviceHost = 'http://localhost/diabettestdbsrv';
+var serviceHost = 'http://diabettestdbsrv.000webhostapp.com';
 window.fn = {};
 
 var loginUsername = "default";
