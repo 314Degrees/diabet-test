@@ -13,87 +13,8 @@
 	<ons-splitter>
 		<ons-splitter-side id="menu" side="left" width="300px" collapse swipeable>
 			<ons-page>
-				<ons-list>
-					<ons-list-item onclick="fn.load('home.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-home" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Home
-						</div>
-					</ons-list-item>
-					<ons-list-item onclick="fn.load('cek_diabetes.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-invert-colors" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Cek Diabetes
-						</div>
-					</ons-list-item>
-					<ons-list-item onclick="fn.load('riwayat.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-time-restore" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Riwayat
-						</div>
-					</ons-list-item>
-					<ons-list-item onclick="fn.load('pengaturan_akun.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-account-box" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Pengaturan Akun
-						</div>
-					</ons-list-item>
-					<ons-list-item onclick="fn.load('about.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-long-arrow-return" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Log out
-						</div>
-					</ons-list-item>
-					<ons-list-item onclick="fn.load('about.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-accounts-list-alt" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Manajemen User
-						</div>
-					</ons-list-item>
-					<ons-list-item onclick="fn.load('about.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-hotel" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Data Penyakit
-						</div>
-					</ons-list-item>
-					<ons-list-item onclick="fn.load('about.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-shield-check" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Data Penanganan
-						</div>
-					</ons-list-item>
-					<ons-list-item onclick="fn.load('about.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-alert-polygon" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Data Gejala
-						</div>
-					</ons-list-item>
-					<ons-list-item onclick="fn.load('about.html')" tappable>
-						<div class="left">
-							<ons-icon icon="md-receipt" class="list-item__icon"></ons-icon>
-						</div>
-						<div class="center">
-							Data Diagnosis
-						</div>
-					</ons-list-item>
+				<ons-list id="menuHolder">
+					
 				</ons-list>
 			</ons-page>
 		</ons-splitter-side>
@@ -140,7 +61,7 @@
 					</div>
 					<div class="content">
 						<p>Anda ragu dengan keadaan tubuh Anda?, lakukan pengujian agar dapat mengetahui potensi Anda mengalami diabetes!.</p>
-						<p><ons-button>Cek Sekarang!</ons-button></p>
+						<p><ons-button onclick="fn.load('cek_diabetes.html')">Cek Sekarang!</ons-button></p>
 					</div>
 				</ons-card>
 			</ons-page>
@@ -158,86 +79,414 @@
 						Riwayat Diagnosis
 					</div>
 				</ons-toolbar>
-				<div style="height: 200px; padding: 8px; width: 95%;">
-					<table class="table-fill">
-						<thead>
-							<tr>
-								<th class="text-left">Tx ID</th>
-								<th class="text-left">From</th>
-								<th class="text-left">Date</th>
-								<th class="text-left">Total</th>
-							</tr>
-						</thead>
-						<tbody class="table-hover" id="historyHolder">
-							<tr>
-								<td class="text-left">Tx ID</td>
-								<td class="text-left">From</td>
-								<td class="text-left">Date</td>
-								<td class="text-left">Total</td>
-							</tr>
-							<tr>
-								<td class="text-left">Tx ID</td>
-								<td class="text-left">From</td>
-								<td class="text-left">Date</td>
-								<td class="text-left">Total</td>
-							</tr>
-							<tr>
-								<td class="text-left">Tx ID</td>
-								<td class="text-left">From</td>
-								<td class="text-left">Date</td>
-								<td class="text-left">Total</td>
-							</tr>
-						</tbody>
-					</table>
+
+				<div id="historyHolder">
+					
 				</div>
 			</ons-page>
 		</template>
 
 		<template id="cek_diabetes.html">
-			<ons-page>
-				<ons-toolbar>
-					<div class="left">
-						<ons-toolbar-button onclick="fn.open()">
-							<ons-icon icon="md-menu"></ons-icon>
-						</ons-toolbar-button>
-					</div>
-					<div class="center">
-						Tes Diabetes
-					</div>
-				</ons-toolbar>
-				<ons-card>
-					<div class="title">
-						Apakah Anda merasa ...?
-					</div>
-					<div class="content">
-						<ons-list>
-							<ons-row>
-								<ons-col>
-									<ons-list-item tappable>
-										<label class="left">
-											<ons-radio name="color" input-id="radio-3"></ons-radio>
-										</label>
-										<label for="radio-3" class="center">
-											Ya
-										</label>
-									</ons-list-item>
-								</ons-col>
-								<ons-col>
-									<ons-list-item tappable>
-										<label class="left">
-											<ons-radio name="color" input-id="radio-4"></ons-radio>
-										</label>
-										<label for="radio-4" class="center">
-											Tidak
-										</label>
-									</ons-list-item>
-								</ons-col>
-							</ons-row>
-						</ons-list>
-						<ons-button>Proses</ons-button>
-					</div>
-				</ons-card>
-			</ons-page>
+			<ons-navigator swipeable animation="lift" id="navigatorCekDiabetes">
+				<ons-page>
+					<ons-toolbar>
+						<div class="left">
+							<ons-toolbar-button onclick="fn.open()">
+								<ons-icon icon="md-menu"></ons-icon>
+							</ons-toolbar-button>
+						</div>
+						<div class="center">
+							Tes Diabetes
+						</div>
+					</ons-toolbar>
+					<ons-card>
+						<div class="content">
+							<p>Untuk dapat melakukan proses diagnosis diabetes, mohon isi pertanyaan berikut sesuai dengan keadaan Anda yang sebenarnya.</p>
+							<p id="loginAdvice"><a onclick="fn.load('login.html')">Login &raquo;</a> untuk dapat menyimpan riwayat hasil diagnosis diabetes, dan membandingkannya dengan hasil diagnosis sebelumnya/selanjutnya.</p>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah Anda merasa mudah lapar?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critA" input-id="critA-yes" value="1"></ons-radio>
+											</label>
+											<label for="critA-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critA" input-id="critA-no" value="0"></ons-radio>
+											</label>
+											<label for="critA-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah Anda merasa mudah haus?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critB" input-id="critB-yes" value="1"></ons-radio>
+											</label>
+											<label for="critB-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critB" input-id="critB-no" value="0"></ons-radio>
+											</label>
+											<label for="critB-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah mulut Anda selalu terasa kering?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critC" input-id="critC-yes" value="1"></ons-radio>
+											</label>
+											<label for="critC-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critC" input-id="critC-no" value="0"></ons-radio>
+											</label>
+											<label for="critC-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah Anda sering buang air kecil?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critD" input-id="critD-yes" value="1"></ons-radio>
+											</label>
+											<label for="critD-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critD" input-id="critD-no" value="0"></ons-radio>
+											</label>
+											<label for="critD-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah berat badan Anda mengalami penurunan tanpa ada penyebab yang jelas?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critE" input-id="critE-yes" value="1"></ons-radio>
+											</label>
+											<label for="critE-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critE" input-id="critE-no" value="0"></ons-radio>
+											</label>
+											<label for="critE-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah Anda sering merasa lelah dan letih?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critF" input-id="critF-yes" value="1"></ons-radio>
+											</label>
+											<label for="critF-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critF" input-id="critF-no" value="0"></ons-radio>
+											</label>
+											<label for="critF-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah kemampuan penglihatan Anda terasa menurun dan pandangan agak kabur?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critG" input-id="critG-yes" value="1"></ons-radio>
+											</label>
+											<label for="critG-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critG" input-id="critG-no" value="0"></ons-radio>
+											</label>
+											<label for="critG-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah Anda terkadang merasa sakit kepala?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critH" input-id="critH-yes" value="1"></ons-radio>
+											</label>
+											<label for="critH-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critH" input-id="critH-no" value="0"></ons-radio>
+											</label>
+											<label for="critH-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah Anda memiliki luka yang sulit sembuh?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critI" input-id="critI-yes" value="1"></ons-radio>
+											</label>
+											<label for="critI-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critI" input-id="critI-no" value="0"></ons-radio>
+											</label>
+											<label for="critI-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah kulit Anda menghitam pada bagian leher, ketiak dan selakangan?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critJ" input-id="critJ-yes" value="1"></ons-radio>
+											</label>
+											<label for="critJ-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critJ" input-id="critJ-no" value="0"></ons-radio>
+											</label>
+											<label for="critJ-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah Anda sering merasa mati rasa dan kesemutan pada bagian tangan dan kaki?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critK" input-id="critK-yes" value="1"></ons-radio>
+											</label>
+											<label for="critK-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critK" input-id="critK-no" value="0"></ons-radio>
+											</label>
+											<label for="critK-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Apakah Anda memiliki anggota keluarga dengan riwayat penyakit diabetes?
+						</div>
+						<div class="content">
+							<ons-list>
+								<ons-row>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critL" input-id="critL-yes" value="1"></ons-radio>
+											</label>
+											<label for="critL-yes" class="center">
+												Ya
+											</label>
+										</ons-list-item>
+									</ons-col>
+									<ons-col>
+										<ons-list-item tappable>
+											<label class="left">
+												<ons-radio name="critL" input-id="critL-no" value="0"></ons-radio>
+											</label>
+											<label for="critL-no" class="center">
+												Tidak
+											</label>
+										</ons-list-item>
+									</ons-col>
+								</ons-row>
+							</ons-list>
+						</div>
+					</ons-card>
+					<ons-card>
+						<div class="title">
+							Pastikan semua pertanyaan sudah diisi.
+						</div>
+						<div class="content">
+							<ons-button onclick="processDiagnose();">Proses</ons-button>
+						</div>
+					</ons-card>
+				</ons-page>
+			</ons-navigator>
 		</template>
 
 		<template id="pengaturan_akun.html">
@@ -253,14 +502,439 @@
 					</div>
 				</ons-toolbar>
 				<ons-list>
-					<ons-list-header>Nama</ons-list-header>
-					<ons-list-item tappable>Pulung Imamuddin</ons-list-item>
+					<ons-list-header>Username</ons-list-header>
+					<ons-list-item tappable><p id="editUsername">N/A</p></ons-list-item>
 
-					<ons-list-header>Edit Nama</ons-list-header>
-					<ons-list-item tappable><ons-input modifier="underbar" float></ons-input></ons-list-item>
+					<ons-list-header>Nama Lengkap</ons-list-header>
+					<ons-list-item tappable><ons-input id="editFullname" class="daftarInput" modifier="underbar"></ons-input></ons-list-item>
+
+					<ons-list-header>Email</ons-list-header>
+					<ons-list-item tappable><ons-input id="editEmail" class="daftarInput" modifier="underbar"></ons-input></ons-list-item>
+
+					<ons-list-header>Nomor Telepon</ons-list-header>
+					<ons-list-item tappable><ons-input id="editPhone" class="daftarInput" modifier="underbar"></ons-input></ons-list-item>
+
+					<ons-list-header>Jenis Kelamin</ons-list-header>
+					<ons-list-item tappable>
+						<ons-row>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="editGender" input-id="e-gender-m" value="m" checked></ons-radio>
+									</label>
+									<label for="e-gender-m" class="center">
+										Laki-laki
+									</label>
+								</ons-list-item>
+							</ons-col>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="editGender" input-id="e-gender-f" value="f"></ons-radio>
+									</label>
+									<label for="e-gender-f" class="center">
+										Perempuan
+									</label>
+								</ons-list-item>
+							</ons-col>
+						</ons-row>
+					</ons-list-item>
+
+					<ons-list-header>Tanggal Lahir</ons-list-header>
+					<ons-list-item tappable><ons-input id="editBirthdate" class="daftarInput" modifier="underbar" type="date"></ons-input></ons-list-item>
+
+					<ons-list-header>Anda menderita diabetes?</ons-list-header>
+					<ons-list-item tappable>
+						<ons-row>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="editDiabetic" input-id="e-diabetic-y" value="1"></ons-radio>
+									</label>
+									<label for="e-diabetic-y" class="center">
+										Ya
+									</label>
+								</ons-list-item>
+							</ons-col>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="editDiabetic" input-id="e-diabetic-n" value="0" checked></ons-radio>
+									</label>
+									<label for="e-diabetic-n" class="center">
+										Tidak
+									</label>
+								</ons-list-item>
+							</ons-col>
+						</ons-row>
+					</ons-list-item>
+
+					<ons-list-header>Anda memiliki keluarga dengan riwayat diabetes?</ons-list-header>
+					<ons-list-item tappable>
+						<ons-row>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="editFamilyDiabetic" input-id="e-familyDiabetic-y" value="1"></ons-radio>
+									</label>
+									<label for="e-familyDiabetic-y" class="center">
+										Ya
+									</label>
+								</ons-list-item>
+							</ons-col>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="editFamilyDiabetic" input-id="e-familyDiabetic-n" value="0" checked></ons-radio>
+									</label>
+									<label for="e-familyDiabetic-n" class="center">
+										Tidak
+									</label>
+								</ons-list-item>
+							</ons-col>
+						</ons-row>
+					</ons-list-item>
+					<ons-list-item>
+						<p style="padding: 0 25% 0 25%">
+							<ons-button modifier="large" onclick="edit();" id="updateButton">Simpan</ons-button>
+						</p>
+					</ons-list-item>
 				</ons-list>
+			</ons-page>
+		</template>
+
+		<template id="hasil_diagnosis.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left"><ons-back-button></ons-back-button></div>
+					<div class="center">Hasil Tes Diabetes</div>
+				</ons-toolbar>
+
+				<div class="loaderHolder" id="resultLoader">
+					<ons-progress-circular indeterminate></ons-progress-circular>
+					<span>Memproses data ...</span>
+				</div>
+
+				<div id="resultHolder">
+					
+				</div>
+			</ons-page>
+		</template>
+
+		<template id="login.html">
+			<ons-navigator swipeable animation="lift" id="navigatorLogin">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button onclick="fn.open()">
+							<ons-icon icon="md-menu"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center">
+						Login
+					</div>
+				</ons-toolbar>
+
+				<div id="loginBG">
+					<div id="loginFormArea">
+						<div style="text-align: center; margin-top: 30px;">
+							<p>
+								<ons-input id="username" class="loginInput" modifier="underbar" placeholder="Username" float></ons-input>
+							</p>
+							<p>
+								<ons-input id="password" class="loginInput" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+							</p>
+							<p style="margin-top: 30px; padding: 0 25% 0 25%">
+								<ons-button modifier="large" id="loginButton" onclick="verify();">Log in</ons-button>
+							</p>
+							<p>atau</p>
+							<p style="padding: 0 25% 0 25%">
+								<ons-button modifier="large" id="daftarButton" onclick="fn.loadup('daftar.html', 'navigatorLogin');">Daftar</ons-button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</ons-page>
+			</ons-navigator>
+		</template>
+
+		<template id="daftar.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left"><ons-back-button></ons-back-button></div>
+					<div class="center">Daftar Akun</div>
+				</ons-toolbar>
+
+				<ons-list>
+					<ons-list-header>Username</ons-list-header>
+					<ons-list-item tappable><ons-input id="daftarUsername" class="daftarInput" modifier="underbar"></ons-input></ons-list-item>
+
+					<ons-list-header id="headerPassword">Password</ons-list-header>
+					<ons-list-item tappable><ons-input id="daftarPassword" class="daftarInput" modifier="underbar" type="password" onkeyup="passwordMatch();"></ons-input></ons-list-item>
+
+					<ons-list-header id="headerRePassword">Ketik Ulang Password</ons-list-header>
+					<ons-list-item tappable><ons-input id="daftarRePassword" class="daftarInput" modifier="underbar" type="password" onkeyup="passwordMatch();"></ons-input></ons-list-item>
+
+					<ons-list-header>Nama Lengkap</ons-list-header>
+					<ons-list-item tappable><ons-input id="daftarFullname" class="daftarInput" modifier="underbar"></ons-input></ons-list-item>
+
+					<ons-list-header>Email</ons-list-header>
+					<ons-list-item tappable><ons-input id="daftarEmail" class="daftarInput" modifier="underbar"></ons-input></ons-list-item>
+
+					<ons-list-header>Nomor Telepon</ons-list-header>
+					<ons-list-item tappable><ons-input id="daftarPhone" class="daftarInput" modifier="underbar"></ons-input></ons-list-item>
+
+					<ons-list-header>Jenis Kelamin</ons-list-header>
+					<ons-list-item tappable>
+						<ons-row>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="daftarGender" input-id="gender-m" value="m" checked></ons-radio>
+									</label>
+									<label for="gender-m" class="center">
+										Laki-laki
+									</label>
+								</ons-list-item>
+							</ons-col>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="daftarGender" input-id="gender-f" value="f"></ons-radio>
+									</label>
+									<label for="gender-f" class="center">
+										Perempuan
+									</label>
+								</ons-list-item>
+							</ons-col>
+						</ons-row>
+					</ons-list-item>
+
+					<ons-list-header>Tanggal Lahir</ons-list-header>
+					<ons-list-item tappable><ons-input id="daftarBirthdate" class="daftarInput" modifier="underbar" type="date"></ons-input></ons-list-item>
+
+					<ons-list-header>Anda menderita diabetes?</ons-list-header>
+					<ons-list-item tappable>
+						<ons-row>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="daftarDiabetic" input-id="diabetic-y" value="1"></ons-radio>
+									</label>
+									<label for="diabetic-y" class="center">
+										Ya
+									</label>
+								</ons-list-item>
+							</ons-col>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="daftarDiabetic" input-id="diabetic-n" value="0" checked></ons-radio>
+									</label>
+									<label for="diabetic-n" class="center">
+										Tidak
+									</label>
+								</ons-list-item>
+							</ons-col>
+						</ons-row>
+					</ons-list-item>
+
+					<ons-list-header>Anda memiliki keluarga dengan riwayat diabetes?</ons-list-header>
+					<ons-list-item tappable>
+						<ons-row>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="daftarFamilyDiabetic" input-id="familyDiabetic-y" value="1"></ons-radio>
+									</label>
+									<label for="familyDiabetic-y" class="center">
+										Ya
+									</label>
+								</ons-list-item>
+							</ons-col>
+							<ons-col>
+								<ons-list-item tappable>
+									<label class="left">
+										<ons-radio name="daftarFamilyDiabetic" input-id="familyDiabetic-n" value="0" checked></ons-radio>
+									</label>
+									<label for="familyDiabetic-n" class="center">
+										Tidak
+									</label>
+								</ons-list-item>
+							</ons-col>
+						</ons-row>
+					</ons-list-item>
+					<ons-list-item>
+						<p style="padding: 0 25% 0 25%">
+							<ons-button modifier="large" onclick="daftar();" id="daftarAkunButton">Daftar</ons-button>
+						</p>
+					</ons-list-item>
+				</ons-list>
+			</ons-page>
+		</template>
+
+		<template id="data_diagnosis.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button onclick="fn.open()">
+							<ons-icon icon="md-menu"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center">
+						Data Diagnosis
+					</div>
+				</ons-toolbar>
+
+				<div id="dataDiagnosisHolder">
+					
+				</div>
+			</ons-page>
+		</template>
+
+		<template id="data_penyakit.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button onclick="fn.open()">
+							<ons-icon icon="md-menu"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center">
+						Data Penyakit
+					</div>
+				</ons-toolbar>
+
+				<div id="captionPenyakitHolder">
+					
+				</div>
+
+				<div style="height: 200px; padding: 8px; width: 95%;">
+					<table class="table-fill">
+						<thead>
+							<tr>
+								<th class="text-left">ID</th>
+								<th class="text-left">A</th>
+								<th class="text-left">B</th>
+								<th class="text-left">C</th>
+								<th class="text-left">D</th>
+								<th class="text-left">E</th>
+								<th class="text-left">F</th>
+								<th class="text-left">G</th>
+								<th class="text-left">H</th>
+								<th class="text-left">I</th>
+								<th class="text-left">J</th>
+								<th class="text-left">K</th>
+								<th class="text-left">L</th>
+								<th class="text-left">X</th>
+							</tr>
+						</thead>
+						<tbody class="table-hover" id="dataPenyakitHolder">
+							
+						</tbody>
+					</table>
+				</div>
+			</ons-page>
+		</template>
+
+		<template id="data_penanganan.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button onclick="fn.open()">
+							<ons-icon icon="md-menu"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center">
+						Data Penanganan
+					</div>
+				</ons-toolbar>
+
+				<div id="dataPenangananHolder">
+					
+				</div>
+			</ons-page>
+		</template>
+
+		<template id="data_gejala.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button onclick="fn.open()">
+							<ons-icon icon="md-menu"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center">
+						Data Gejala
+					</div>
+				</ons-toolbar>
+
+				<div style="height: 200px; padding: 8px; width: 95%;">
+					<table class="table-fill">
+						<thead>
+							<tr>
+								<th class="text-left">ID</th>
+								<th class="text-left">Gejala</th>
+								<th class="text-left">Edit</th>
+							</tr>
+						</thead>
+						<tbody class="table-hover" id="dataGejalaHolder">
+							
+						</tbody>
+					</table>
+				</div>
+			</ons-page>
+		</template>
+
+		<template id="manajemen_user.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left">
+						<ons-toolbar-button onclick="fn.open()">
+							<ons-icon icon="md-menu"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="center">
+						Manajemen User
+					</div>
+				</ons-toolbar>
+
+				<div style="height: 200px; padding: 8px; width: 95%;">
+					<table class="table-fill">
+						<thead>
+							<tr>
+								<th class="text-left">Username</th>
+								<th class="text-left">Fullname</th>
+								<th class="text-left">Edit</th>
+								<th class="text-left">Hapus</th>
+							</tr>
+						</thead>
+						<tbody class="table-hover" id="dataUserHolder">
+							
+						</tbody>
+					</table>
+				</div>
+			</ons-page>
+		</template>
+
+		<!--  -->
+
+		<template id="testPage.html">
+			<ons-page>
+				<ons-toolbar>
+					<div class="left"><ons-back-button>Page 1</ons-back-button></div>
+					<div class="center">Test Page</div>
+				</ons-toolbar>
+
+				<div class="loaderHolder">
+					<ons-progress-circular indeterminate></ons-progress-circular>
+					<span>Loading data ...</span>
+				</div>
+				<div style="height: 200px; padding: 1px 0 0 0;">
+					
+				</div>
 			</ons-page>
 		</template>
 		<script src="js/main.js"></script>
 	</body>
-	</html>
+</html>

@@ -6,10 +6,7 @@ a {
 #loginBG {
 	width: 100%;
 	height: 100%;
-	background-image: url('../images/bg.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-color: #eee;
 }
 
 #loginFormArea {
@@ -18,30 +15,39 @@ a {
 	padding: 1px 0 0 0;
 	/*background-color: blue;*/
 	position: absolute;
-	margin-top: 90%;
+	margin-top: 80%;
 }
 
-#loginButton {
+#daftarButton {
 	background-color: #FFF;
 	color: #FFC30F;
 }
 
 .loginInput input {
-	color: #fff;
+	color: #000;
 	background-image: linear-gradient(to top,transparent 1px, #ccc 1px);
 	height: 35px;
 }
 
 .loginInput input:focus {
-	background-image: linear-gradient(#fff,#fff),linear-gradient(to top,transparent 1px,#ccc 1px);
+	background-image: linear-gradient(#FFC30F,#FFC30F),linear-gradient(to top,transparent 1px,#ccc 1px);
 }
 
 .loginInput .text-input--material__label--active {
-	color: #fff;
+	color: #FFC30F;
 }
 
 .loginInput .text-input--material__label {
 	top: 7px;
+}
+
+.daftarInput input {
+	color: #000;
+	background-image: linear-gradient(to top,transparent 1px, #ccc 1px);
+}
+
+.daftarInput input:focus {
+	background-image: linear-gradient(#FFC30F,#FFC30F),linear-gradient(to top,transparent 1px,#ccc 1px);
 }
 
 .cover {
@@ -74,6 +80,25 @@ a {
 	margin-top: 16px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#loginButton ons-progress-circular {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.errorPasswordHeader {
+	color: red;
+}
+
+.errorPasswordInput input {
+	color: #000;
+	background-image: linear-gradient(to top,transparent 1px, red 1px);
+}
+
+.errorPasswordInput input:focus {
+	background-image: linear-gradient(red,red),linear-gradient(to top,transparent 1px,red 1px);
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);

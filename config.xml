@@ -3,7 +3,7 @@
 	xmlns:gap   = "http://phonegap.com/ns/1.0"
 	id          = "com.Degrees314.DiabetTest"
 	versionCode = "10"
-	version     = "0.6.11" >
+	version     = "0.27.4" >
 
 	<!-- versionCode is optional and Android only -->
 
